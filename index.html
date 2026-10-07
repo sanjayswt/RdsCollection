@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sringar Jewels | Imitation & Fashion Jewellery</title>
+<meta name="description" content="Bridal, oxidized, Korean-style and daily-wear imitation jewellery. Anti-tarnish finish, pan-India delivery, order on WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+/* ============ THEME (edit colours here) ============ */
+:root{
+  --maroon:#6d1a36; --maroon-d:#4a0f24; --gold:#c9a24b; --gold-l:#e8d4a0;
+  --cream:#fbf6ee; --ink:#2a1a20; --muted:#7a6a70; --white:#fff;
+  --radius:14px; --shadow:0 8px 28px rgba(74,15,36,.12);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Poppins',sans-serif;color:var(--ink);background:var(--cream);line-height:1.6}
+img,svg{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit;cursor:pointer;border:none}
+h1,h2,h3{font-family:'Cormorant Garamond',serif;line-height:1.15}
+.container{width:min(1180px,92%);margin:auto}
+section{padding:72px 0}
+.sec-title{text-align:center;margin-bottom:40px}
+.sec-title h2{font-size:clamp(2rem,4vw,2.8rem);color:var(--maroon)}
+.sec-title p{color:var(--muted);margin-top:8px}
+.sec-title .line{width:70px;height:3px;background:var(--gold);margin:14px auto 0;border-radius:3px}
+.btn{display:inline-block;padding:13px 28px;border-radius:50px;font-weight:500;font-size:.95rem;transition:.25s}
+.btn-gold{background:var(--gold);color:var(--maroon-d)}
+.btn-gold:hover{background:var(--maroon);color:var(--gold-l)}
+.btn-outline{border:1.5px solid var(--gold-l);color:var(--white)}
+.btn-outline:hover{background:var(--gold);color:var(--maroon-d);border-color:var(--gold)}
+.btn-wa{background:#25d366;color:#fff}
+.btn-wa:hover{background:#1da851}
+
+/* top bar + nav */
+.topbar{background:var(--maroon-d);color:var(--gold-l);text-align:center;font-size:.8rem;padding:8px 10px;letter-spacing:.3px}
+header{position:sticky;top:0;z-index:50;background:rgba(251,246,238,.96);backdrop-filter:blur(8px);border-bottom:1px solid #eadfcf}
+.nav{display:flex;align-items:center;justify-content:space-between;height:70px}
+.logo{font-family:'Cormorant Garamond',serif;font-size:1.8rem;font-weight:700;color:var(--maroon)}
+.logo span{color:var(--gold)}
+.nav ul{display:flex;gap:28px;list-style:none;font-size:.92rem}
+.nav ul a{padding:6px 0;border-bottom:2px solid transparent;transition:.2s}
+.nav ul a:hover{color:var(--maroon);border-color:var(--gold)}
+.nav-actions{display:flex;align-items:center;gap:14px}
+.cart-btn{position:relative;background:var(--maroon);color:#fff;padding:9px 18px;border-radius:50px;font-size:.88rem}
+.cart-btn b{background:var(--gold);color:var(--maroon-d);border-radius:50%;padding:1px 7px;margin-left:6px;font-size:.78rem}
+.burger{display:none;background:none;font-size:1.7rem;color:var(--maroon)}
+
+/* hero */
+.hero{background:linear-gradient(120deg,var(--maroon-d),var(--maroon) 60%,#8c2a4b);color:#fff;padding:90px 0;position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;right:-120px;top:-120px;width:420px;height:420px;border-radius:50%;border:60px solid rgba(201,162,75,.12)}
+.hero .grid{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;position:relative;z-index:1}
+.hero small{color:var(--gold-l);letter-spacing:3px;text-transform:uppercase;font-size:.78rem}
+.hero h1{font-size:clamp(2.6rem,6vw,4.4rem);margin:14px 0 18px}
+.hero h1 em{color:var(--gold);font-style:italic}
+.hero p{color:#ecd9df;max-width:480px;margin-bottom:28px}
+.hero .cta{display:flex;gap:14px;flex-wrap:wrap}
+.hero-art{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.hero-art .card{background:rgba(255,255,255,.08);border:1px solid rgba(232,212,160,.25);border-radius:var(--radius);padding:14px;text-align:center;font-size:.85rem;color:var(--gold-l)}
+.hero-art .card:nth-child(even){transform:translateY(22px)}
+
+/* trust */
+.trust{background:var(--white);padding:28px 0;border-bottom:1px solid #eadfcf}
+.trust .row{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;text-align:center}
+.trust .t{font-size:.88rem}
+.trust .t i{font-style:normal;font-size:1.6rem;display:block}
+.trust .t b{display:block;color:var(--maroon)}
+.trust .t span{color:var(--muted);font-size:.8rem}
+
+/* categories */
+.cats{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.cat{background:var(--white);border-radius:var(--radius);padding:26px 16px;text-align:center;box-shadow:var(--shadow);transition:.25s;border:1px solid transparent}
+.cat:hover{transform:translateY(-6px);border-color:var(--gold)}
+.cat i{font-style:normal;font-size:2.2rem}
+.cat h3{font-size:1.35rem;color:var(--maroon);margin:8px 0 4px}
+.cat p{font-size:.8rem;color:var(--muted)}
+
+/* shop */
+.toolbar{display:flex;gap:12px;flex-wrap:wrap;justify-content:space-between;align-items:center;margin-bottom:26px}
+.chips{display:flex;gap:8px;flex-wrap:wrap}
+.chip{background:var(--white);border:1px solid #e0d2bd;padding:8px 18px;border-radius:50px;font-size:.85rem;color:var(--ink)}
+.chip.active,.chip:hover{background:var(--maroon);color:#fff;border-color:var(--maroon)}
+.tools{display:flex;gap:10px}
+.tools input,.tools select{padding:10px 16px;border:1px solid #e0d2bd;border-radius:50px;font-family:inherit;font-size:.85rem;background:#fff;outline:none}
+.tools input:focus,.tools select:focus{border-color:var(--gold)}
+.products{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.prod{background:var(--white);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);display:flex;flex-direction:column;transition:.25s}
+.prod:hover{transform:translateY(-5px)}
+.prod .img{aspect-ratio:1/1;position:relative;display:grid;place-items:center}
+.prod .tag{position:absolute;top:10px;left:10px;background:var(--maroon);color:#fff;font-size:.68rem;padding:3px 10px;border-radius:50px}
+.prod .body{padding:14px 16px 18px;display:flex;flex-direction:column;flex:1}
+.prod .cat-n{font-size:.7rem;text-transform:uppercase;letter-spacing:1.5px;color:var(--gold)}
+.prod h3{font-family:'Poppins',sans-serif;font-size:.95rem;font-weight:500;margin:4px 0 8px}
+.price{margin-top:auto;display:flex;align-items:baseline;gap:8px}
+.price b{font-size:1.1rem;color:var(--maroon)}
+.price s{font-size:.8rem;color:var(--muted)}
+.price em{font-style:normal;font-size:.75rem;color:#2e8b57}
+.prod .add{margin-top:12px;background:var(--cream);color:var(--maroon);border:1px solid var(--gold);padding:9px;border-radius:50px;font-size:.85rem;font-weight:500;transition:.2s}
+.prod .add:hover{background:var(--maroon);color:#fff}
+.empty{grid-column:1/-1;text-align:center;color:var(--muted);padding:40px}
+
+/* why / insights */
+.why{background:var(--white)}
+.why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.why-card{padding:28px;border-radius:var(--radius);background:var(--cream);border-left:4px solid var(--gold)}
+.why-card h3{color:var(--maroon);font-size:1.4rem;margin-bottom:8px}
+.why-card p{font-size:.9rem;color:var(--muted)}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:44px;text-align:center}
+.stat{background:linear-gradient(135deg,var(--maroon-d),var(--maroon));color:#fff;border-radius:var(--radius);padding:30px 16px}
+.stat b{font-family:'Cormorant Garamond',serif;font-size:2.6rem;color:var(--gold)}
+.stat span{display:block;font-size:.85rem;color:#ecd9df}
+.note{font-size:.72rem;color:var(--muted);text-align:center;margin-top:12px}
+
+/* wholesale */
+.wholesale{background:linear-gradient(120deg,var(--maroon-d),var(--maroon));color:#fff}
+.wholesale .grid{display:grid;grid-template-columns:1.2fr .8fr;gap:40px;align-items:center}
+.wholesale h2{font-size:2.6rem;color:var(--gold-l)}
+.wholesale ul{list-style:none;margin:18px 0 26px}
+.wholesale li{padding:5px 0;color:#ecd9df}
+.wholesale li::before{content:"✦ ";color:var(--gold)}
+.wbox{background:rgba(255,255,255,.08);border:1px solid rgba(232,212,160,.3);border-radius:var(--radius);padding:30px;text-align:center}
+.wbox b{font-family:'Cormorant Garamond',serif;font-size:3rem;color:var(--gold)}
+
+/* testimonials */
+.tgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.tcard{background:var(--white);padding:26px;border-radius:var(--radius);box-shadow:var(--shadow)}
+.tcard .st{color:var(--gold);letter-spacing:2px}
+.tcard p{font-size:.9rem;margin:10px 0 14px;color:var(--muted)}
+.tcard b{color:var(--maroon);font-size:.88rem}
+
+/* care + faq */
+.two{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+.care{background:var(--white);padding:30px;border-radius:var(--radius);box-shadow:var(--shadow)}
+.care h3{color:var(--maroon);font-size:1.7rem;margin-bottom:12px}
+.care li{margin:0 0 8px 18px;font-size:.9rem;color:var(--muted)}
+details{background:var(--white);border-radius:12px;padding:15px 20px;margin-bottom:10px;box-shadow:0 3px 12px rgba(74,15,36,.06)}
+summary{cursor:pointer;font-weight:500;color:var(--maroon)}
+details p{margin-top:8px;font-size:.88rem;color:var(--muted)}
+
+/* contact */
+.contact{background:var(--white)}
+.cgrid{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+.cinfo p{margin-bottom:12px;color:var(--muted)}
+.cinfo b{color:var(--maroon)}
+form{display:grid;gap:14px}
+form input,form textarea,form select{padding:13px 16px;border:1px solid #e0d2bd;border-radius:10px;font-family:inherit;font-size:.92rem;background:var(--cream);outline:none;width:100%}
+form input:focus,form textarea:focus,form select:focus{border-color:var(--gold)}
+
+footer{background:var(--maroon-d);color:#d9c5cc;padding:48px 0 20px;font-size:.88rem}
+.fgrid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:30px}
+footer h4{color:var(--gold-l);margin-bottom:12px;font-family:'Cormorant Garamond',serif;font-size:1.3rem}
+footer a{display:block;padding:3px 0}
+footer a:hover{color:var(--gold)}
+.copy{text-align:center;border-top:1px solid rgba(255,255,255,.12);margin-top:30px;padding-top:16px;font-size:.78rem}
+
+/* cart drawer */
+.overlay{position:fixed;inset:0;background:rgba(0,0,0,.5);opacity:0;visibility:hidden;transition:.3s;z-index:90}
+.overlay.show{opacity:1;visibility:visible}
+.drawer{position:fixed;top:0;right:-440px;width:min(420px,100%);height:100%;background:var(--cream);z-index:100;transition:.35s;display:flex;flex-direction:column;box-shadow:-8px 0 30px rgba(0,0,0,.2)}
+.drawer.open{right:0}
+.dhead{display:flex;justify-content:space-between;align-items:center;padding:18px 22px;background:var(--maroon);color:#fff}
+.dhead h3{font-size:1.6rem}
+.dhead button{background:none;color:#fff;font-size:1.6rem}
+.ditems{flex:1;overflow:auto;padding:16px 22px}
+.ci{display:flex;gap:12px;align-items:center;padding:12px 0;border-bottom:1px solid #eadfcf}
+.ci .th{width:54px;height:54px;border-radius:10px;flex-shrink:0}
+.ci .inf{flex:1;font-size:.85rem}
+.ci .inf b{display:block}
+.qty{display:flex;align-items:center;gap:8px;margin-top:4px}
+.qty button{width:24px;height:24px;border-radius:50%;background:#fff;border:1px solid var(--gold);color:var(--maroon)}
+.rm{background:none;color:#b33;font-size:1.1rem}
+.dfoot{padding:18px 22px;background:#fff;border-top:1px solid #eadfcf}
+.dfoot .tot{display:flex;justify-content:space-between;font-weight:600;margin-bottom:6px}
+.dfoot small{display:block;color:var(--muted);margin-bottom:12px;font-size:.75rem}
+.dfoot .btn{width:100%;text-align:center}
+.toast{position:fixed;bottom:90px;left:50%;transform:translate(-50%,30px);background:var(--maroon);color:#fff;padding:10px 22px;border-radius:50px;font-size:.85rem;opacity:0;transition:.3s;z-index:120;pointer-events:none}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+.wa-float{position:fixed;bottom:22px;right:22px;z-index:80;background:#25d366;color:#fff;width:56px;height:56px;border-radius:50%;display:grid;place-items:center;font-size:1.7rem;box-shadow:0 6px 20px rgba(0,0,0,.25)}
+
+@media(max-width:980px){
+  .products{grid-template-columns:repeat(3,1fr)}
+  .cats{grid-template-columns:repeat(2,1fr)}
+  .hero .grid,.wholesale .grid,.two,.cgrid{grid-template-columns:1fr}
+  .hero-art{display:none}
+  .why-grid,.tgrid{grid-template-columns:1fr}
+  .fgrid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:720px){
+  section{padding:52px 0}
+  .burger{display:block}
+  .nav ul{position:absolute;top:70px;left:0;right:0;background:var(--cream);flex-direction:column;gap:0;padding:8px 5%;display:none;border-bottom:1px solid #eadfcf}
+  .nav ul.open{display:flex}
+  .nav ul li{padding:10px 0;border-bottom:1px solid #efe5d4}
+  .products{grid-template-columns:repeat(2,1fr);gap:14px}
+  .trust .row{grid-template-columns:repeat(2,1fr)}
+  .stats{grid-template-columns:1fr}
+  .tools{width:100%}.tools input{flex:1}
+  .fgrid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<div class="topbar">🎉 Festive Offer: Free shipping on orders above ₹999 • Use code <b>SRINGAR10</b> for 10% off your first order</div>
+
+<header>
+  <div class="container nav">
+    <a href="#home" class="logo">Sringar<span>Jewels</span></a>
+    <ul id="menu">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#categories">Collections</a></li>
+      <li><a href="#shop">Shop</a></li>
+      <li><a href="#why">Why Us</a></li>
+      <li><a href="#wholesale">Wholesale</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="cart-btn" id="openCart">🛍 Cart<b id="cartCount">0</b></button>
+      <button class="burger" id="burger" aria-label="Menu">☰</button>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="container grid">
+    <div>
+      <small>Imitation • Fashion • Bridal</small>
+      <h1>Look <em>royal</em>,<br>spend smart.</h1>
+      <p>Handpicked imitation jewellery with a rich gold look, anti-tarnish finish and designs for every occasion — from daily wear to the big fat Indian wedding.</p>
+      <div class="cta">
+        <a href="#shop" class="btn btn-gold">Shop Now</a>
+        <a href="#wholesale" class="btn btn-outline">Wholesale Enquiry</a>
+      </div>
+    </div>
+    <div class="hero-art">
+      <div class="card"><div id="h1"></div>Bridal Sets</div>
+      <div class="card"><div id="h2"></div>Jhumkas</div>
+      <div class="card"><div id="h3"></div>Temple Jewellery</div>
+      <div class="card"><div id="h4"></div>Korean Style</div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST -->
+<div class="trust">
+  <div class="container row">
+    <div class="t"><i>✨</i><b>Anti-Tarnish Finish</b><span>Long-lasting shine</span></div>
+    <div class="t"><i>🚚</i><b>Pan-India Delivery</b><span>3–7 working days</span></div>
+    <div class="t"><i>💬</i><b>Order on WhatsApp</b><span>Quick & personal</span></div>
+    <div class="t"><i>🔁</i><b>Easy Exchange</b><span>7-day for damaged items</span></div>
+  </div>
+</div>
+
+<!-- CATEGORIES -->
+<section id="categories">
+  <div class="container">
+    <div class="sec-title"><h2>Shop by Collection</h2><p>Trending styles Indian women love</p><div class="line"></div></div>
+    <div class="cats">
+      <a class="cat" href="#shop" data-go="Bridal"><i>👰</i><h3>Bridal Sets</h3><p>Kundan, polki & AD sets</p></a>
+      <a class="cat" href="#shop" data-go="Earrings"><i>💎</i><h3>Earrings</h3><p>Jhumkas, studs, chandbalis</p></a>
+      <a class="cat" href="#shop" data-go="Oxidized"><i>🪔</i><h3>Oxidized</h3><p>Boho & tribal silver look</p></a>
+      <a class="cat" href="#shop" data-go="Korean"><i>🎀</i><h3>Korean Style</h3><p>Minimal, dainty, trendy</p></a>
+      <a class="cat" href="#shop" data-go="Necklaces"><i>📿</i><h3>Necklaces</h3><p>Chokers, long & layered</p></a>
+      <a class="cat" href="#shop" data-go="Bangles"><i>⭕</i><h3>Bangles</h3><p>Kadas, sets & bracelets</p></a>
+      <a class="cat" href="#shop" data-go="Anklets"><i>🔔</i><h3>Anklets & Toe Rings</h3><p>Payal & bichiya</p></a>
+      <a class="cat" href="#shop" data-go="Combo"><i>🎁</i><h3>Gift Combos</h3><p>Perfect for gifting</p></a>
+    </div>
+  </div>
+</section>
+
+<!-- SHOP -->
+<section id="shop" style="background:var(--white)">
+  <div class="container">
+    <div class="sec-title"><h2>Our Collection</h2><p>Tap "Add to Cart" and send your order on WhatsApp</p><div class="line"></div></div>
+    <div class="toolbar">
+      <div class="chips" id="chips"></div>
+      <div class="tools">
+        <input type="search" id="search" placeholder="Search jewellery…">
+        <select id="sort">
+          <option value="def">Sort: Featured</option>
+          <option value="low">Price: Low to High</option>
+          <option value="high">Price: High to Low</option>
+        </select>
+      </div>
+    </div>
+    <div class="products" id="products"></div>
+  </div>
+</section>
+
+<!-- WHY + INSIGHTS -->
+<section class="why" id="why">
+  <div class="container">
+    <div class="sec-title"><h2>Why Imitation Jewellery?</h2><p>Smart choice in today's market</p><div class="line"></div></div>
+    <div class="why-grid">
+      <div class="why-card"><h3>Gold-Like Look, Fraction of Cost</h3><p>With precious-metal prices rising, more shoppers are choosing high-quality imitation pieces for weddings, festivals and daily wear.</p></div>
+      <div class="why-card"><h3>Wear Different, Every Time</h3><p>Affordable prices mean you can match a new set to every outfit without worrying about locker safety or theft.</p></div>
+      <div class="why-card"><h3>Trend-Led Designs</h3><p>Korean minimal, oxidized boho, temple and AD styles — we refresh collections often so you stay on trend.</p></div>
+    </div>
+    <div class="stats">
+      <div class="stat"><b>₹5.87B*</b><span>Indian artificial jewellery market, 2026 (US$)</span></div>
+      <div class="stat"><b>~8.8%*</b><span>Expected yearly growth (CAGR) to 2032</span></div>
+      <div class="stat"><b>~30%*</b><span>Share of earrings — the top-selling category</span></div>
+    </div>
+    <p class="note">*Industry estimates from MarkNtel Advisors' India Artificial Jewelry Market report (2026). Market figures are indicative.</p>
+  </div>
+</section>
+
+<!-- WHOLESALE -->
+<section class="wholesale" id="wholesale">
+  <div class="container grid">
+    <div>
+      <h2>Wholesale & Reseller Program</h2>
+      <p style="color:#ecd9df">Own a boutique, run an Instagram store or sell at exhibitions? Buy direct and grow your margins.</p>
+      <ul>
+        <li>Special bulk pricing from 12 pieces</li>
+        <li>Fresh designs every month</li>
+        <li>Private-label / custom packaging on request</li>
+        <li>Fast dispatch across India</li>
+      </ul>
+      <a class="btn btn-gold" id="wsBtn" href="#contact">Get Wholesale Catalogue</a>
+    </div>
+    <div class="wbox"><b>Min. 12 pcs</b><p style="color:#ecd9df">per order for reseller rates</p></div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section>
+  <div class="container">
+    <div class="sec-title"><h2>Loved by Customers</h2><p>Sample feedback — replace with your real reviews</p><div class="line"></div></div>
+    <div class="tgrid">
+      <div class="tcard"><div class="st">★★★★★</div><p>Sample review: The bridal set looked just like real gold in photos. Add your first customer's words here.</p><b>— Customer Name, City</b></div>
+      <div class="tcard"><div class="st">★★★★★</div><p>Sample review: Light-weight jhumkas, comfortable for all-day wear. Add a real customer review here.</p><b>— Customer Name, City</b></div>
+      <div class="tcard"><div class="st">★★★★☆</div><p>Sample review: Packaging was neat and delivery was quick. Add a real customer review here.</p><b>— Customer Name, City</b></div>
+    </div>
+  </div>
+</section>
+
+<!-- CARE + FAQ -->
+<section id="faq" style="background:var(--white)">
+  <div class="container two">
+    <div>
+      <div class="care">
+        <h3>Jewellery Care Tips</h3>
+        <ul>
+          <li>Apply perfume and cosmetics before wearing jewellery.</li>
+          <li>Keep away from water, sweat and chemicals.</li>
+          <li>Wipe with a soft dry cloth after each use.</li>
+          <li>Store in an airtight pouch or box with anti-tarnish paper.</li>
+          <li>Keep sets separately to avoid scratches.</li>
+        </ul>
+      </div>
+    </div>
+    <div>
+      <h2 style="color:var(--maroon);font-size:2rem;margin-bottom:14px">Frequently Asked Questions</h2>
+      <details><summary>How do I place an order?</summary><p>Add items to your cart and click "Order on WhatsApp". Your cart is sent to us as a message and we confirm availability, delivery charge and payment details.</p></details>
+      <details><summary>Which payment methods do you accept?</summary><p>UPI, bank transfer and Cash on Delivery (selected pincodes). Update this section to match your actual options.</p></details>
+      <details><summary>How long does delivery take?</summary><p>Usually 3–7 working days across India. Metro cities are often faster.</p></details>
+      <details><summary>Can I return or exchange?</summary><p>Exchange is available within 7 days for damaged or wrong products, with an unboxing video as proof.</p></details>
+      <details><summary>Will the jewellery turn black?</summary><p>Our pieces have an anti-tarnish finish, but all imitation jewellery lasts longer when kept dry and away from perfume and water.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="container">
+    <div class="sec-title"><h2>Get in Touch</h2><p>Questions, custom orders or wholesale — message us</p><div class="line"></div></div>
+    <div class="cgrid">
+      <div class="cinfo">
+        <p><b>📍 Address:</b><br>Your Shop Address, City, State – PIN</p>
+        <p><b>📞 Phone / WhatsApp:</b><br>+91 98765 43210</p>
+        <p><b>✉ Email:</b><br>hello@sringarjewels.in</p>
+        <p><b>🕘 Hours:</b><br>Mon–Sat: 10 AM – 8 PM</p>
+        <p><b>📸 Instagram:</b><br>@sringarjewels</p>
+      </div>
+      <form id="contactForm">
+        <input type="text" id="cname" placeholder="Your name" required>
+        <input type="tel" id="cphone" placeholder="Phone number" required>
+        <select id="ctype"><option>General enquiry</option><option>Wholesale enquiry</option><option>Custom / bridal order</option></select>
+        <textarea id="cmsg" rows="4" placeholder="Your message" required></textarea>
+        <button class="btn btn-gold" type="submit">Send via WhatsApp</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container fgrid">
+    <div><h4>SringarJewels</h4><p>Premium-look imitation jewellery for every occasion. Style that sparkles, prices that smile.</p></div>
+    <div><h4>Quick Links</h4><a href="#shop">Shop</a><a href="#categories">Collections</a><a href="#wholesale">Wholesale</a><a href="#faq">FAQ</a></div>
+    <div><h4>Policies</h4><a href="#faq">Shipping</a><a href="#faq">Exchange</a><a href="#faq">Jewellery Care</a></div>
+    <div><h4>Follow Us</h4><a href="#">Instagram</a><a href="#">Facebook</a><a href="#">Pinterest</a></div>
+  </div>
+  <div class="container copy">© <span id="yr"></span> Sringar Jewels. All rights reserved. Imitation jewellery — not made of precious metals.</div>
+</footer>
+
+<a class="wa-float" id="waFloat" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">💬</a>
+
+<!-- CART -->
+<div class="overlay" id="overlay"></div>
+<aside class="drawer" id="drawer">
+  <div class="dhead"><h3>Your Cart</h3><button id="closeCart">×</button></div>
+  <div class="ditems" id="ditems"></div>
+  <div class="dfoot">
+    <div class="tot"><span>Total</span><span id="ctotal">₹0</span></div>
+    <small>Delivery charges & final confirmation on WhatsApp</small>
+    <button class="btn btn-wa" id="checkout">Order on WhatsApp</button>
+  </div>
+</aside>
+<div class="toast" id="toast"></div>
+
+<script>
+/* ============ BUSINESS SETTINGS — EDIT THESE ============ */
+const WHATSAPP_NUMBER = "919876543210";   // country code + number, no + or spaces
+const STORE_NAME = "Sringar Jewels";
+
+/* ============ PRODUCTS — add/edit freely ============
+   cat: Bridal | Earrings | Oxidized | Korean | Necklaces | Bangles | Anklets | Combo
+   type: ring-shape used for the illustration (earring, necklace, bangle, set, anklet, pendant)
+   Replace "type" art with real photos by adding  img:"images/your-photo.jpg"                 */
+const PRODUCTS = [
+ {id:1, name:"Kundan Bridal Necklace Set", cat:"Bridal", type:"set", price:1499, mrp:2999, tag:"Bestseller", c:["#c9a24b","#6d1a36"]},
+ {id:2, name:"Polki Choker with Earrings", cat:"Bridal", type:"necklace", price:1299, mrp:2499, tag:"Wedding", c:["#e8d4a0","#2e6b57"]},
+ {id:3, name:"AD Stone Bridal Set", cat:"Bridal", type:"set", price:1799, mrp:3499, tag:"New", c:["#d8d8e8","#4a2a7a"]},
+ {id:4, name:"Temple Haram Long Necklace", cat:"Necklaces", type:"necklace", price:999, mrp:1899, tag:"Trending", c:["#c9a24b","#8c2a4b"]},
+ {id:5, name:"Pearl Layered Necklace", cat:"Necklaces", type:"necklace", price:549, mrp:999, tag:"", c:["#f4ecd8","#a89060"]},
+ {id:6, name:"Gold Plated Jhumka Earrings", cat:"Earrings", type:"earring", price:349, mrp:699, tag:"Bestseller", c:["#c9a24b","#6d1a36"]},
+ {id:7, name:"Chandbali Meenakari Earrings", cat:"Earrings", type:"earring", price:449, mrp:899, tag:"", c:["#c9a24b","#1c6b7a"]},
+ {id:8, name:"Pearl Drop Studs", cat:"Earrings", type:"earring", price:199, mrp:399, tag:"Daily wear", c:["#f4ecd8","#b8a070"]},
+ {id:9, name:"Oxidized Silver Jhumkas", cat:"Oxidized", type:"earring", price:299, mrp:599, tag:"Boho", c:["#a8a8b0","#4a4a55"]},
+ {id:10,name:"Oxidized Tribal Necklace", cat:"Oxidized", type:"necklace", price:599, mrp:1199, tag:"", c:["#a8a8b0","#3c3c48"]},
+ {id:11,name:"Oxidized Peacock Pendant Set", cat:"Oxidized", type:"set", price:699, mrp:1399, tag:"Trending", c:["#9aa0a8","#2e6b57"]},
+ {id:12,name:"Korean Butterfly Studs", cat:"Korean", type:"earring", price:179, mrp:349, tag:"New", c:["#f3c6d4","#d46a8c"]},
+ {id:13,name:"Dainty Heart Pendant Chain", cat:"Korean", type:"pendant", price:249, mrp:499, tag:"Daily wear", c:["#e8d4a0","#c9627f"]},
+ {id:14,name:"Korean Pearl Hoop Earrings", cat:"Korean", type:"earring", price:229, mrp:449, tag:"", c:["#f4ecd8","#8aa4c8"]},
+ {id:15,name:"Kada Bangle Pair (Gold Tone)", cat:"Bangles", type:"bangle", price:649, mrp:1299, tag:"", c:["#c9a24b","#6d1a36"]},
+ {id:16,name:"Stone Studded Bangles (Set of 4)", cat:"Bangles", type:"bangle", price:499, mrp:999, tag:"Festive", c:["#c9a24b","#2a6b3c"]},
+ {id:17,name:"Adjustable Charm Bracelet", cat:"Bangles", type:"bangle", price:249, mrp:499, tag:"", c:["#e8d4a0","#b0607a"]},
+ {id:18,name:"Silver Look Payal (Pair)", cat:"Anklets", type:"anklet", price:349, mrp:699, tag:"", c:["#c8c8d0","#6a6a78"]},
+ {id:19,name:"Gold Tone Anklet with Ghungroo", cat:"Anklets", type:"anklet", price:299, mrp:599, tag:"New", c:["#c9a24b","#8c2a4b"]},
+ {id:20,name:"Bichiya Toe Ring Set", cat:"Anklets", type:"anklet", price:149, mrp:299, tag:"", c:["#c8c8d0","#7a5a8a"]},
+ {id:21,name:"Festive Combo: Necklace + Jhumka + Bangles", cat:"Combo", type:"set", price:1199, mrp:2399, tag:"Gift", c:["#c9a24b","#6d1a36"]},
+ {id:22,name:"Daily Wear Combo (3 Earrings)", cat:"Combo", type:"earring", price:399, mrp:799, tag:"Value", c:["#f4ecd8","#d46a8c"]},
+ {id:23,name:"Bridesmaid Gift Combo (Pack of 5)", cat:"Combo", type:"set", price:1999, mrp:3999, tag:"Gift", c:["#e8d4a0","#4a2a7a"]},
+ {id:24,name:"Layered Gold Chain Necklace", cat:"Necklaces", type:"necklace", price:449, mrp:899, tag:"", c:["#c9a24b","#8a6a20"]}
+];
+const CATS = ["All","Bridal","Earrings","Oxidized","Korean","Necklaces","Bangles","Anklets","Combo"];
+
+/* ============ helpers ============ */
+const $ = s => document.querySelector(s);
+const inr = n => "₹" + n.toLocaleString("en-IN");
+
+/* Decorative SVG art (placeholder until real photos are added) */
+function art(type, c, size){
+  const [g, b] = c, id = "g"+Math.random().toString(36).slice(2,8);
+  const defs = `<defs><linearGradient id="${id}" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="${g}"/><stop offset="1" stop-color="${b}"/></linearGradient></defs>`;
+  const shapes = {
+    earring:`<circle cx="60" cy="38" r="6" fill="url(#${id})"/><path d="M60 44 L60 54" stroke="${g}" stroke-width="3"/><path d="M60 54 C38 58 34 92 60 108 C86 92 82 58 60 54Z" fill="url(#${id})"/><circle cx="60" cy="82" r="8" fill="#fff" opacity=".6"/>`,
+    necklace:`<path d="M24 34 C26 96 94 96 96 34" fill="none" stroke="${g}" stroke-width="4"/><path d="M60 88 L48 100 L60 114 L72 100Z" fill="url(#${id})"/><circle cx="36" cy="68" r="4" fill="${b}"/><circle cx="84" cy="68" r="4" fill="${b}"/><circle cx="60" cy="80" r="4" fill="${g}"/>`,
+    set:`<path d="M20 28 C22 74 98 74 100 28" fill="none" stroke="${g}" stroke-width="4"/><path d="M60 68 L50 80 L60 92 L70 80Z" fill="url(#${id})"/><path d="M28 92 C18 100 22 114 30 114 C38 114 40 100 28 92Z" fill="url(#${id})"/><path d="M92 92 C82 100 86 114 94 114 C102 114 104 100 92 92Z" fill="url(#${id})"/>`,
+    bangle:`<ellipse cx="60" cy="64" rx="38" ry="38" fill="none" stroke="url(#${id})" stroke-width="12"/><ellipse cx="60" cy="64" rx="38" ry="38" fill="none" stroke="#fff" stroke-width="2" stroke-dasharray="3 9" opacity=".7"/>`,
+    anklet:`<path d="M14 50 C40 96 80 96 106 50" fill="none" stroke="${g}" stroke-width="4"/><circle cx="34" cy="80" r="5" fill="url(#${id})"/><circle cx="60" cy="90" r="6" fill="url(#${id})"/><circle cx="86" cy="80" r="5" fill="url(#${id})"/>`,
+    pendant:`<path d="M26 30 C30 70 90 70 94 30" fill="none" stroke="${g}" stroke-width="3"/><path d="M60 98 C30 76 44 56 60 70 C76 56 90 76 60 98Z" fill="url(#${id})"/>`
+  };
+  return `<svg viewBox="0 0 120 128" width="${size||150}" height="${size||150}" role="img">${defs}${shapes[type]||shapes.set}</svg>`;
+}
+const bgFor = c => `linear-gradient(135deg, ${c[0]}22, ${c[1]}22)`;
+
+/* hero art */
+[["h1","set",["#e8d4a0","#c9a24b"]],["h2","earring",["#e8d4a0","#c9a24b"]],["h3","necklace",["#e8d4a0","#c9a24b"]],["h4","pendant",["#f3c6d4","#e8d4a0"]]]
+ .forEach(([i,t,c])=>{ $("#"+i).innerHTML = art(t,c,90); });
+
+/* ============ state ============ */
+let activeCat = "All", query = "", sortBy = "def";
+let cart = [];
+try { cart = JSON.parse(localStorage.getItem("sj_cart")||"[]"); } catch(e){ cart = []; }
+const save = () => { try{ localStorage.setItem("sj_cart", JSON.stringify(cart)); }catch(e){} };
+
+/* ============ render shop ============ */
+function renderChips(){
+  $("#chips").innerHTML = CATS.map(c=>`<button class="chip ${c===activeCat?'active':''}" data-cat="${c}">${c}</button>`).join("");
+}
+function renderProducts(){
+  let list = PRODUCTS.filter(p => (activeCat==="All"||p.cat===activeCat) && p.name.toLowerCase().includes(query));
+  if(sortBy==="low") list.sort((a,b)=>a.price-b.price);
+  if(sortBy==="high") list.sort((a,b)=>b.price-a.price);
+  $("#products").innerHTML = list.length ? list.map(p=>{
+    const off = Math.round((1-p.price/p.mrp)*100);
+    const imgHtml = p.img ? `<img src="${p.img}" alt="${p.name}" loading="lazy" style="width:100%;height:100%;object-fit:cover">` : art(p.type,p.c,150);
+    return `<article class="prod">
+      <div class="img" style="background:${bgFor(p.c)}">${p.tag?`<span class="tag">${p.tag}</span>`:""}${imgHtml}</div>
+      <div class="body">
+        <span class="cat-n">${p.cat}</span>
+        <h3>${p.name}</h3>
+        <div class="price"><b>${inr(p.price)}</b><s>${inr(p.mrp)}</s><em>${off}% off</em></div>
+        <button class="add" data-id="${p.id}">Add to Cart</button>
+      </div></article>`;
+  }).join("") : `<div class="empty">No products found. Try another search or category.</div>`;
+}
+
+/* ============ cart ============ */
+function toast(msg){ const t=$("#toast"); t.textContent=msg; t.classList.add("show"); setTimeout(()=>t.classList.remove("show"),1600); }
+function addToCart(id){
+  const it = cart.find(i=>i.id===id);
+  it ? it.qty++ : cart.push({id,qty:1});
+  save(); renderCart(); toast("Added to cart ✓");
+}
+function renderCart(){
+  const count = cart.reduce((s,i)=>s+i.qty,0);
+  $("#cartCount").textContent = count;
+  let total = 0;
+  $("#ditems").innerHTML = cart.length ? cart.map(i=>{
+    const p = PRODUCTS.find(x=>x.id===i.id); if(!p) return "";
+    total += p.price*i.qty;
+    return `<div class="ci">
+      <div class="th" style="background:${bgFor(p.c)};display:grid;place-items:center">${art(p.type,p.c,40)}</div>
+      <div class="inf"><b>${p.name}</b>${inr(p.price)}
+        <div class="qty"><button data-dec="${p.id}">−</button>${i.qty}<button data-inc="${p.id}">+</button></div></div>
+      <button class="rm" data-rm="${p.id}" aria-label="Remove">🗑</button></div>`;
+  }).join("") : `<p style="text-align:center;color:var(--muted);margin-top:40px">Your cart is empty 🛍<br>Add some sparkle!</p>`;
+  $("#ctotal").textContent = inr(total);
+}
+const openCart  = () => { $("#drawer").classList.add("open"); $("#overlay").classList.add("show"); };
+const closeCart = () => { $("#drawer").classList.remove("open"); $("#overlay").classList.remove("show"); };
+function waLink(text){ return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`; }
+
+/* ============ events ============ */
+document.addEventListener("click", e=>{
+  const t = e.target;
+  if(t.dataset.cat){ activeCat=t.dataset.cat; renderChips(); renderProducts(); }
+  if(t.dataset.id){ addToCart(+t.dataset.id); }
+  if(t.dataset.inc){ cart.find(i=>i.id==t.dataset.inc).qty++; save(); renderCart(); }
+  if(t.dataset.dec){ const it=cart.find(i=>i.id==t.dataset.dec); it.qty--; if(it.qty<=0) cart=cart.filter(i=>i!==it); save(); renderCart(); }
+  if(t.dataset.rm){ cart=cart.filter(i=>i.id!=t.dataset.rm); save(); renderCart(); }
+  const catLink = t.closest("[data-go]");
+  if(catLink){ activeCat=catLink.dataset.go; renderChips(); renderProducts(); }
+});
+$("#search").addEventListener("input", e=>{ query=e.target.value.trim().toLowerCase(); renderProducts(); });
+$("#sort").addEventListener("change", e=>{ sortBy=e.target.value; renderProducts(); });
+$("#openCart").onclick = openCart; $("#closeCart").onclick = closeCart; $("#overlay").onclick = closeCart;
+$("#burger").onclick = ()=> $("#menu").classList.toggle("open");
+document.querySelectorAll("#menu a").forEach(a=>a.addEventListener("click",()=>$("#menu").classList.remove("open")));
+
+$("#checkout").onclick = ()=>{
+  if(!cart.length){ toast("Your cart is empty"); return; }
+  let total=0;
+  const lines = cart.map((i,n)=>{ const p=PRODUCTS.find(x=>x.id===i.id); total+=p.price*i.qty; return `${n+1}. ${p.name} × ${i.qty} = ${inr(p.price*i.qty)}`; });
+  const msg = `Hello ${STORE_NAME}! I'd like to order:\n\n${lines.join("\n")}\n\nTotal: ${inr(total)}\n\nName:\nAddress & Pincode:\nPayment (UPI/COD):`;
+  window.open(waLink(msg), "_blank");
+};
+$("#contactForm").addEventListener("submit", e=>{
+  e.preventDefault();
+  const msg = `Hello ${STORE_NAME}!\nType: ${$("#ctype").value}\nName: ${$("#cname").value}\nPhone: ${$("#cphone").value}\nMessage: ${$("#cmsg").value}`;
+  window.open(waLink(msg), "_blank");
+});
+$("#waFloat").href = waLink(`Hello ${STORE_NAME}, I have a question about your jewellery.`);
+$("#yr").textContent = new Date().getFullYear();
+
+/* init */
+renderChips(); renderProducts(); renderCart();
+</script>
+</body>
+</html>
